@@ -4,6 +4,7 @@ import '../Navbar/Navbar.css';
 import logo from '../../../public/IMG/theqa-logo-white.png';
 import { RxDropdownMenu, RxCross1 } from "react-icons/rx";
 import { FiGlobe, FiChevronRight } from "react-icons/fi";
+import { RiMenu3Fill } from "react-icons/ri";
 
 const Navbar = ({ language, setLanguage }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,7 +22,7 @@ const Navbar = ({ language, setLanguage }) => {
     { text: "الرئيسية", key: "home" },
     { text: "عنا", key: "about" },
     { text: "الرئيس التنفيذى", key: "ceo" },
-    { text: "شهادة", key: "testimonial" },
+    { text: "توصية", key: "testimonial" },
     { text: "تواصل معنا", key: "contact" }
   ] : [
     { text: "Home", key: "home" },
@@ -74,7 +75,7 @@ const Navbar = ({ language, setLanguage }) => {
           onClick={toggleMobileMenu}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
-          {mobileMenuOpen ? <RxCross1 /> : <RxDropdownMenu />}
+          {mobileMenuOpen ? <RxCross1 /> : <RiMenu3Fill />}
         </button>
 
         {/* Mobile Menu Overlay */}
