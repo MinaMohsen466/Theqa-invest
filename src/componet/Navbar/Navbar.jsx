@@ -1,7 +1,7 @@
 // Navbar.jsx
 import React, { useState } from 'react';
 import '../Navbar/Navbar.css';
-import logo from '../../../public/IMG/theqa-logo-white.png';
+import logo from '../../../public/IMG/theqa-logo.png';
 import { RxDropdownMenu, RxCross1 } from "react-icons/rx";
 import { FiGlobe, FiChevronRight } from "react-icons/fi";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -19,17 +19,13 @@ const Navbar = ({ language, setLanguage }) => {
   };
 
   const menuItems = language ? [
-    { text: "الرئيسية", key: "home" },
     { text: "عنا", key: "about" },
-    { text: "الرئيس التنفيذى", key: "ceo" },
-    { text: "توصية", key: "testimonial" },
-    { text: "تواصل معنا", key: "contact" }
+    { text: "خدماتنا", key: "testimonial" },
+    { text: "موقعنا", key: "location" }
   ] : [
-    { text: "Home", key: "home" },
     { text: "About Theqa", key: "about" },
-    { text: "Our CEO", key: "ceo" },
-    { text: "Testimonial", key: "testimonial" },
-    { text: "Contact Us", key: "contact" }
+    { text: "Services", key: "Services" },
+    { text: "Locate Us", key: "Locate Us" }
   ];
 
   return (
@@ -38,37 +34,36 @@ const Navbar = ({ language, setLanguage }) => {
         <div className='logo'>
           <img src={logo} alt="THEQA-INVEST-LOGO" />
         </div>
-
-        {/* Desktop Menu */}
-        <nav className={`desktop-menu ${language ? 'rtl' : 'ltr'}`}>
-          <ul>
-            {menuItems.map((item) => (
-              <li 
-                key={item.key}
-                onMouseEnter={() => setHoveredItem(item.key)}
-                onMouseLeave={() => setHoveredItem(null)}
-                className={hoveredItem === item.key ? 'hovered' : ''}
-              >
-                {item.text}
-                <span className="hover-underline"></span>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Language Toggle - Single Button */}
-        <button 
-          className="language-toggle"
-          onClick={toggleLanguage}
-          aria-label={language ? "Switch to English" : "التغيير إلى العربية"}
-          onMouseEnter={(e) => e.currentTarget.classList.add('hovered')}
-          onMouseLeave={(e) => e.currentTarget.classList.remove('hovered')}
-        >
-          <FiGlobe className="globe-icon" />
-          {language ? "English" : "العربية"}
-          <span className="hover-underline"></span>
-        </button>
-
+        <div className="navbar-right-group">
+          {/* Desktop Menu */}
+          <nav className={`desktop-menu ${language ? 'rtl' : 'ltr'}`}>
+            <ul>
+              {menuItems.map((item) => (
+                <li 
+                  key={item.key}
+                  onMouseEnter={() => setHoveredItem(item.key)}
+                  onMouseLeave={() => setHoveredItem(null)}
+                  className={hoveredItem === item.key ? 'hovered' : ''}
+                >
+                  {item.text}
+                  <span className="hover-underline"></span>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          {/* Language Toggle - Single Button */}
+          <button 
+            className="language-toggle"
+            onClick={toggleLanguage}
+            aria-label={language ? "Switch to English" : "التغيير إلى العربية"}
+            onMouseEnter={(e) => e.currentTarget.classList.add('hovered')}
+            onMouseLeave={(e) => e.currentTarget.classList.remove('hovered')}
+          >
+            
+            {language ? "E" : "ع"}
+            <span className="hover-underline"></span>
+          </button>
+        </div>
         {/* Mobile Menu Button */}
         <button 
           className='mobile-menu-button' 
