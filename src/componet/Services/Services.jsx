@@ -1,28 +1,29 @@
 import React from 'react';
-import { FaChartLine, FaGraduationCap, FaGlobeAmericas } from 'react-icons/fa';
+import { PiToolboxFill, PiPresentationChartFill  } from "react-icons/pi";
+import { LuChartNoAxesCombined } from "react-icons/lu";
 import './Services.css';
 
 const Services = ({ language }) => {
   const services = [
     {
-      icon: <FaChartLine className="service-icon" />,
+      icon: <LuChartNoAxesCombined className="service-icon" />,
       title: {
-        en: 'Exclusive Investment Recommendations',
-        ar: 'توصيات استثمارية حصرية'
+        en: <>Exclusive Investment <br /> Recommendations</>,
+        ar: <>توصيات <br />استثمارية حصرية</>
       },
     },
     {
-      icon: <FaGraduationCap className="service-icon" />,
+      icon: <PiPresentationChartFill className="service-icon" />,
       title: {
-        en: 'Intensive Training Sessions',
-        ar: 'جلسات تدريبية مكثفة'
+        en: <>Intensive Training <br /> Sessions</>,
+        ar: <> جلسات <br /> تدريبية مكثفة</>
       },
     },
     {
-      icon: <FaGlobeAmericas className="service-icon" />,
+      icon: <PiToolboxFill className="service-icon" />,
       title: {
-        en: 'Creating a Diversified Global Investment Portfolio',
-        ar: 'إنشاء محفظة استثمارية عالمية متنوعة'
+        en: <>Creating a Diversified Global <br /> Investment Portfolio</>,
+        ar: <>إنشاء محفظة <br />استثمارية عالمية متنوعة</>
       },
     }
   ];

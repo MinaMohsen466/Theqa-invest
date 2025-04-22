@@ -1,5 +1,5 @@
 // Navbar.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Navbar/Navbar.css';
 import logo from '../../../public/IMG/theqa-logo.png';
 import { RxDropdownMenu, RxCross1 } from "react-icons/rx";
@@ -10,8 +10,18 @@ const Navbar = ({ language, setLanguage }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
   
+  // Load language preference from localStorage on component mount
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('theqa-language');
+    if (savedLanguage !== null) {
+      setLanguage(savedLanguage === 'true');
+    }
+  }, [setLanguage]);
+  
   const toggleLanguage = () => {
-    setLanguage(!language);
+    const newLanguage = !language;
+    setLanguage(newLanguage);
+    localStorage.setItem('theqa-language', newLanguage.toString());
   };
 
   const toggleMobileMenu = () => {
@@ -70,7 +80,7 @@ const Navbar = ({ language, setLanguage }) => {
           onClick={toggleMobileMenu}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
-          {mobileMenuOpen ? <RxCross1 /> : <RiMenu3Fill />}
+          {mobileMenuOpen ? <RxCross1 style={{ color: "var(--white-color)" }} /> : <RiMenu3Fill style={{ color: "var(--primary-color)" }} />}
         </button>
 
         {/* Mobile Menu Overlay */}

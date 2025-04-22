@@ -78,7 +78,7 @@ const SliderShow = ({ language }) => {
         {slides.map((slide, index) => (
           <div key={index} className="relative">
             {/* Image Section */}
-            <div className="h-[40vh] md:h-[calc(100vh-135.56px)]">
+            <div className="h-[40vh] md:h-[calc(100vh-156.78px)] relative">
               <picture>
                 <source media="(max-width: 768px)" srcSet={slide.mobileImage} />
                 <source media="(min-width: 769px)" srcSet={slide.image} />
@@ -100,19 +100,21 @@ const SliderShow = ({ language }) => {
                   </h2>
                 </div>
               </div>
+              {/* Mobile Text Overlay */}
+              <div className="md:hidden absolute inset-0 bg-black/30 flex items-center justify-center px-4">
+                <div 
+                  className={`text-white text-center ${language ? 'font-[Tajawal]' : 'font-[Poppins]'}`}
+                  dir={language ? "rtl" : "ltr"}
+                >
+                  <h2 className="text-2xl font-bold leading-tight">
+                    {language ? slide.title.ar : slide.title.en}
+                  </h2>
+                </div>
+              </div>
             </div>
 
             {/* Text Content for Mobile (below image) */}
-            <div className="md:hidden bg-white p-6 text-center">
-              <div 
-                className={`text-gray-800 ${language ? 'font-[Tajawal]' : 'font-[Poppins]'}`}
-                dir={language ? "rtl" : "ltr"}
-              >
-                <h2 className="text-2xl font-bold mb-3 leading-tight">
-                  {language ? slide.title.ar : slide.title.en}
-                </h2>
-              </div>
-            </div>
+            {/* Removed mobile text content section as requested */}
           </div>
         ))}
       </Slider>
