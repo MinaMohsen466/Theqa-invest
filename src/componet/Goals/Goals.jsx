@@ -2,10 +2,20 @@ import React from 'react';
 import './Goals.css';
 import Banner from '../../../public/IMG/Banner.png';
 import { FaWhatsapp } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 const Goals = ({ language }) => {
+  const navigate = useNavigate();
+  
   const handleWhatsAppClick = () => {
     window.open(`https://wa.me/98049957`, '_blank');
+  };
+  
+  const handleReadMoreClick = (index) => {
+    // Currently only implementing navigation for Retirement Planning (index 0)
+    if (index === 0) {
+      navigate('/retirement-planning');
+    }
   };
 
   const goals = [
@@ -89,7 +99,10 @@ const Goals = ({ language }) => {
               <p className="goal-description">
                 {language ? goal.description.ar : goal.description.en}
               </p>
-              <a href="#" className="goal-read-more">
+              <a href="#" className="goal-read-more" onClick={(e) => {
+                e.preventDefault();
+                handleReadMoreClick(index);
+              }}>
                 {language ? goal.readMore.ar : goal.readMore.en}
               </a>
             </div>

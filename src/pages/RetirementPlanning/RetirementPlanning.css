@@ -1,0 +1,145 @@
+.retirement-planning-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+.retirement-planning-container.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.retirement-banner {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+}
+
+.retirement-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.retirement-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 20px;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.retirement-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.rtl .retirement-content h2 {
+    text-align: right;
+}
+
+.retirement-text {
+    color: #555;
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+.retirement-text p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.appointment-button {
+    background-color: #9e1b32;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.appointment-button:hover {
+    background-color: #7a1526;
+    transform: translateY(-2px);
+}
+
+.floating-whatsapp-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color, #9e1b32);
+    color: var(--white-color, white);
+    font-size: 1.8rem;
+    border: none;
+}
+
+.rtl .floating-whatsapp-button {
+    right: auto;
+    left: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.floating-whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+.floating-whatsapp-button i,
+.floating-whatsapp-button svg {
+    color: white;
+    font-size: 28px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .retirement-content {
+        padding: 30px 15px;
+    }
+    
+    .retirement-content h2 {
+        font-size: 28px;
+    }
+    
+    .retirement-text p {
+        font-size: 15px;
+    }
+    
+    .appointment-button {
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .retirement-banner {
+        height: 300px;
+    }
+    
+    .retirement-content h2 {
+        font-size: 24px;
+    }
+    
+    .appointment-button {
+        width: 100%;
+    }
+}

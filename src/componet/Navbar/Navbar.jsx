@@ -5,6 +5,7 @@ import logo from '../../../public/IMG/theqa-logo.png';
 import { RxDropdownMenu, RxCross1 } from "react-icons/rx";
 import { FiGlobe, FiChevronRight } from "react-icons/fi";
 import { RiMenu3Fill } from "react-icons/ri";
+import { href } from 'react-router-dom';
 
 const Navbar = ({ language, setLanguage }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,13 +30,13 @@ const Navbar = ({ language, setLanguage }) => {
   };
 
   const menuItems = language ? [
-    { text: "عنا", key: "about" },
-    { text: "خدماتنا", key: "testimonial" },
-    { text: "موقعنا", key: "location" }
+    { text: "عنا", key: "about", href: "#about" },
+    { text: "خدماتنا", key: "testimonial", href: "#testimonial"  },
+    { text: "موقعنا", key: "location", href: "#location"}
   ] : [
-    { text: "About Theqa", key: "about" },
-    { text: "Services", key: "Services" },
-    { text: "Locate Us", key: "Locate Us" }
+    { text: "About Theqa", key: "about", href: "#about"  },
+    { text: "Services", key: "Services", href: "#testimonial"   },
+    { text: "Locate Us", key: "Locate Us", href: "#location" }
   ];
 
   return (
@@ -49,15 +50,18 @@ const Navbar = ({ language, setLanguage }) => {
           <nav className={`desktop-menu ${language ? 'rtl' : 'ltr'}`}>
             <ul>
               {menuItems.map((item) => (
-                <li 
+                <a 
+                  href={item.href}
                   key={item.key}
                   onMouseEnter={() => setHoveredItem(item.key)}
                   onMouseLeave={() => setHoveredItem(null)}
                   className={hoveredItem === item.key ? 'hovered' : ''}
+                  onClick={() => {
+                  }}
                 >
                   {item.text}
                   <span className="hover-underline"></span>
-                </li>
+                </a>
               ))}
             </ul>
           </nav>
