@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import { FaTiktok, FaInstagram, FaYoutube } from 'react-icons/fa';
-import logo from '../../../public/IMG/theqa-logo.png';
+import logo from '../../../public/IMG/theqa-logo-white.png';
 
 const Footer = () => {
   return (
