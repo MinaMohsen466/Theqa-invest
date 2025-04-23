@@ -1,13 +1,14 @@
 import React from 'react';
 import './Footer.css';
 import { FaTiktok, FaInstagram, FaYoutube } from 'react-icons/fa';
+import logo from '../../../public/IMG/theqa-logo.png';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <img src="/public/IMG/theqa-logo-white.png" alt="Theqa Invest Logo" />
+          <img src={logo} alt="Theqa Invest Logo" />
         </div>
         
         <div className="social-section">
