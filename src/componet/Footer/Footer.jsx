@@ -2,12 +2,11 @@ import React from 'react';
 import './Footer.css';
 import { FaTiktok, FaInstagram, FaYoutube } from 'react-icons/fa';
 import logo from '../../../public/IMG/theqa-logo-white.png';
-import { useLocation, Link, useNavigate } from 'react-router-dom';
+import { useLocation, Link} from 'react-router-dom';
 
 const Footer = ({language}) => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-  const navigation = useNavigate();
 
 
   
@@ -59,7 +58,7 @@ const Footer = ({language}) => {
         </nav>
         
         <div className="footer-bottom">
-          <p>© 2025 Theqa Invest. | <a href="" onClick={navigation('/TermsAndConditions')}>Terms & Conditions</a> | <a href="" onClick={navigation('/PrivacyPolicies')}>Privacy Policy</a> | All rights reserved.</p>
+          <p>© 2025 Theqa Invest. | <a href="">Terms & Conditions</a> | <a href="">Privacy Policy</a> | All rights reserved.</p>
         </div>
       </div>
     </footer>
