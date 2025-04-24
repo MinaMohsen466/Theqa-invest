@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Statistics.css';
+import { useNavigate } from 'react-router-dom';
 
 const Statistics = ({ language }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +28,7 @@ const Statistics = ({ language }) => {
 
   // Animation for counting up
   const [counters, setCounters] = useState([0, 0]);
-  
+  const navigate = useNavigate();
   // Intersection Observer to trigger animation
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -80,7 +81,7 @@ const Statistics = ({ language }) => {
         <div className="statistics-text">
           <h2>{language ? 'أنت في المكان الصحيح' : 'You\'re in the right place'}</h2>
           <p>{language ? 'ابدأ الاستثمار في أهدافك اليوم' : 'Start investing in your goals today'}</p>
-          <button className="appointment-button" onClick={() => window.location.href = '/book-appointment'}>
+          <button className="appointment-button" onClick={navigate('/book-appointment')}>
             {language ? 'احجز موعدًا' : 'Book An Appointment'}
           </button>
         </div>

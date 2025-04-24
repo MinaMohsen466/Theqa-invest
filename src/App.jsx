@@ -36,7 +36,7 @@ const [language, setLanguage] = useState(() => {
             <AboutTheqa language={language}/>
             <LocateUs language={language}/>
             {/* <StockDeals language={language}/> */}
-            <Footer />
+            <Footer language={language}/>
           </>
         } />
         <Route path="/retirement-planning" element={
