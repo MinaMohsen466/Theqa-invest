@@ -2,8 +2,29 @@ import React from 'react';
 import './Footer.css';
 import { FaTiktok, FaInstagram, FaYoutube } from 'react-icons/fa';
 import logo from '../../../public/IMG/theqa-logo-white.png';
+import { useLocation, Link } from 'react-router-dom';
 
 const Footer = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
+  
+  // Function to handle navigation to sections
+  const handleNavigation = (e, sectionId) => {
+    e.preventDefault();
+    
+    if (isHomePage) {
+      // If on home page, scroll to the section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If on another page, navigate to home page with hash
+      window.location.href = `/${sectionId ? '#' + sectionId : ''}`;
+    }
+  };
+  
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -28,15 +49,15 @@ const Footer = () => {
         
         <nav className="footer-nav">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#testimonial">Services</a></li>
-            <li><a href="#about">About Theqa</a></li>
-            <li><a href="#location">Locate Us</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><a href="#testimonial" onClick={(e) => handleNavigation(e, 'testimonial')}>Services</a></li>
+            <li><a href="#about" onClick={(e) => handleNavigation(e, 'about')}>About Theqa</a></li>
+            <li><a href="#location" onClick={(e) => handleNavigation(e, 'location')}>Locate Us</a></li>
           </ul>
         </nav>
         
         <div className="footer-bottom">
-          <p>© 2025 Theqa Invest. | <a href="/terms">Terms & Conditions</a> | <a href="/privacy">Privacy Policy</a> | All rights reserved.</p>
+          <p>© 2025 Theqa Invest. | <a href="/TermsAndConditions">Terms & Conditions</a> | <a href="/PrivacyPolicies">Privacy Policy</a> | All rights reserved.</p>
         </div>
       </div>
     </footer>

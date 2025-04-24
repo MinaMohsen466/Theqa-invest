@@ -1,0 +1,139 @@
+.Estateplan-container {
+    width: 100%;
+}
+
+.Estateplan-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Estateplan-banner {
+    width: 100%;
+    padding: 0 0 .5rem 0;
+}
+
+.Estateplan-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Estateplan-content h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.Estateplan-text p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.Estateplan-btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.Estateplan-appointment-button {
+    padding: 0.7rem 2rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.Estateplan-appointment-button:hover {
+    transform: scale(1.02);
+}
+
+.Estateplan-floating-whatsapp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.Estateplan-floating-whatsapp-button:hover {
+    transform: scale(1.06);
+}
+
+@media screen and (max-width: 1024px) {
+    .Estateplan-content {
+        padding: 1.5rem;
+    }
+    
+    .Estateplan-banner {
+        height: 350px;
+    }
+    
+    .Estateplan-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Estateplan-banner {
+        height: 300px;
+    }
+    
+    .Estateplan-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .Estateplan-text p {
+        font-size: 0.95rem;
+    }
+    
+    .Estateplan-appointment-button {
+        font-size: 1.1rem;
+        padding: 0.6rem 1.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Estateplan-content {
+        padding: 1rem;
+    }
+    
+    .Estateplan-banner {
+        height: 250px;
+    }
+    
+    .Estateplan-content h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .Estateplan-text p {
+        font-size: 0.9rem;
+    }
+    
+    .Estateplan-btn-whatsapp {
+        justify-content: space-evenly;
+    }
+    
+    .Estateplan-appointment-button {
+        font-size: 1rem;
+        padding: 0.5rem 3rem;
+    }
+    
+    .Estateplan-floating-whatsapp-button {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+}

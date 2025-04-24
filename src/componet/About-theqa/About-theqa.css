@@ -17,7 +17,7 @@
     height: 125px;
     background-color: #9C1B31;
     position: absolute;
-    bottom: 50px;
+    bottom: 60px;
     z-index: 1;
 }
 
@@ -286,7 +286,6 @@
     .MrAhmed {
         max-width: 220px;
     }
-    
     .ceo-name {
         font-size: 1.3rem;
     }

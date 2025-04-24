@@ -2,10 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import '../Navbar/Navbar.css';
 import logo from '../../../public/IMG/theqa-logo.png';
-import { RxDropdownMenu, RxCross1 } from "react-icons/rx";
+import { RxCross1 } from "react-icons/rx";
 import { FiGlobe, FiChevronRight } from "react-icons/fi";
 import { RiMenu3Fill } from "react-icons/ri";
-import { href } from 'react-router-dom';
 
 const Navbar = ({ language, setLanguage }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -92,7 +91,8 @@ const Navbar = ({ language, setLanguage }) => {
           <nav className="mobile-menu">
             <ul>
               {menuItems.map((item) => (
-                <li 
+                <a
+                  href={item.href} 
                   key={item.key} 
                   className="mobile-menu-item"
                   onClick={toggleMobileMenu}
@@ -101,7 +101,7 @@ const Navbar = ({ language, setLanguage }) => {
                     <span className="mobile-menu-text">{item.text}</span>
                     <FiChevronRight className="mobile-menu-arrow" />
                   </div>
-                </li>
+                </a>
               ))}
             </ul>
           </nav>

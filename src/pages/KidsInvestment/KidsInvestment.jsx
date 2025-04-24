@@ -1,10 +1,10 @@
 import React from 'react'
-import './Estateplan.css';
-import temp2 from '../../../public/IMG/temp2.png';
+import './KidsInvestment.css';
+import temp3 from '../../../public/IMG/temp3.png';
 import { FaWhatsapp } from "react-icons/fa";
+import './KidsInvestment.css';
 
-
-export const Estateplan = ({language}) => {
+const KidsInvestment = ({language}) => {
     const handleWhatsAppClick = () => {
         window.open(`https://wa.me/98049957`, '_blank');
       };
@@ -12,20 +12,15 @@ export const Estateplan = ({language}) => {
     return(
     <div className={`Estateplan-container ${language ? 'rtl' : 'ltr'}`}>
         <div className='Estateplan-banner'>
-            <img src={temp2} alt={language ? "زوجان مسنان يستمتعان بالتقاعد على الشاطئ" : "Elderly couple enjoying retirement at beach"} />
+            <img src={temp3} alt={language ? "زوجان مسنان يستمتعان بالتقاعد على الشاطئ" : "Elderly couple enjoying retirement at beach"} />
         </div>
         <div className='Estateplan-content'>
-            <h2>{language ? "تخطيط التقاعد" : "Establish Your Estate Plan"}</h2>
+            <h2>{language ? "تخطيط التقاعد" : " Plan Your Kids Investment"}</h2>
             <div className='Estatetplan-text'>
                 <p>
                     {language 
                         ? "استثمر في الأسهم من خلال محفظة آمنة لبناء الثروة للتقاعد: من خلال اختيار منصة موثوقة ذات أرباح مضمونة، يمكنك إنشاء مصدر دخل ثابت لدعم احتياجاتك المالية في وقت لاحق من حياتك."
-                        : "Investing in stocks is a great way to grow your capital and eventually buy real estate. Start by a small capital investment with a diversified your portfolio and watch your wallet grows in investment as your profit increase."}
-                </p>
-                <p>
-                    {language 
-                        ? "استثمارات الأسهم، خاصة عندما تكون متنوعة ومُدارة بشكل آمن، توفر إمكانية تحقيق عوائد أعلى مقارنة بخيارات التوفير التقليدية."
-                        : <><br />Over time, these returns can help you save for a real estate down payment. With patience and smart investing, stocks can provide the funds needed to make your property purchase a reality.</>}
+                        : "invest for your children future. Now it is your chance to start an investment plan through a safe wallet on stocks with reliable advises  for your children, As your children get older, the funds you’ve saved can be used for their education, career, or other key life events. With a secure investment plan, you minimize any risk and you secure  a stronger financial future for your kids. It’s a wise way to set them up for success."}
                 </p>
             </div>
             <div className='Estateplan-btn-whatsapp'>
@@ -40,3 +35,5 @@ export const Estateplan = ({language}) => {
     </div>
     )
 }
+
+export default KidsInvestment

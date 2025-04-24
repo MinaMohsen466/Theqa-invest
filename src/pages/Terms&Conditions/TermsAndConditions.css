@@ -1,0 +1,39 @@
+.termsAndConditions-container {
+    width: 45%;
+    margin: 2rem auto;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    h1{
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (max-width: 768px)  {
+    .termsAndConditions-container {
+        width: 80%;
+        line-height: 2.5rem;
+        padding: 1.5rem;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+        h1{
+            font-size: 1.5rem;
+        }
+    }
+    
+}
+@media screen and (max-width: 480px)   {
+    .termsAndConditions-container {
+        width: 90%;
+        line-height: 1.5rem;
+        font-size: .8rem;
+        padding: 1.2rem;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+        h1{
+            font-size: 1.5rem;
+        }
+    }
+}

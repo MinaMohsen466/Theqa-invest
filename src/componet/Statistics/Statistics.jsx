@@ -80,7 +80,7 @@ const Statistics = ({ language }) => {
         <div className="statistics-text">
           <h2>{language ? 'أنت في المكان الصحيح' : 'You\'re in the right place'}</h2>
           <p>{language ? 'ابدأ الاستثمار في أهدافك اليوم' : 'Start investing in your goals today'}</p>
-          <button className="appointment-button">
+          <button className="appointment-button" onClick={() => window.location.href = '/book-appointment'}>
             {language ? 'احجز موعدًا' : 'Book An Appointment'}
           </button>
         </div>

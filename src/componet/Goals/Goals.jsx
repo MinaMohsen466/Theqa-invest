@@ -1,6 +1,9 @@
 import React from 'react';
 import './Goals.css';
-import Banner from '../../../public/IMG/Banner.png';
+import retirementImg from '../../../public/IMG/temp.png';
+import estateplanImg from '../../../public/IMG/temp2.png';
+import kidsInvestmentImg from '../../../public/IMG/temp3.png';
+import InvertmentRecoImg from '../../../public/IMG/temp4.png';
 import { FaWhatsapp } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
@@ -16,11 +19,20 @@ const Goals = ({ language }) => {
     if (index === 0) {
       navigate('/retirement-planning');
     }
+    else if (index === 1) {
+      navigate('/Estateplan');
+    }
+    else if (index === 2) {
+      navigate('/KidsInvestment');
+    }
+    else if (index === 3) {
+      navigate('/InvertmentReco');
+    }
   };
 
   const goals = [
     {
-      image: Banner,
+      image: retirementImg,
       title: {
         en: 'Retirement Planning',
         ar: 'تخطيط التقاعد'
@@ -35,7 +47,7 @@ const Goals = ({ language }) => {
       }
     },
     {
-      image: Banner,
+      image: estateplanImg,
       title: {
         en: 'Establish your estate Plan',
         ar: 'إنشاء خطة العقارات الخاصة بك'
@@ -50,7 +62,7 @@ const Goals = ({ language }) => {
       }
     },
     {
-      image: Banner,
+      image: kidsInvestmentImg,
       title: {
         en: 'Plan your Kids Investment',
         ar: 'خطط لاستثمار أطفالك'
@@ -65,7 +77,7 @@ const Goals = ({ language }) => {
       }
     },
     {
-      image: Banner,
+      image: InvertmentRecoImg,
       title: {
         en: 'Investment Recommendations',
         ar: 'توصيات الاستثمار'
