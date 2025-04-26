@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import './AppointmentBooking.css';
 import { FaWhatsapp, FaArrowLeft } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const AppointmentBooking = ({ language }) => {
+    const navigate = useNavigate();
+    const handleTermsAndConditions = () => {
+        navigate('/TermsAndConditions');
+    }
+    const handlePrivacyPolicies = () => {
+        navigate('/PrivacyPolicies');
+    }
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -108,9 +116,9 @@ const AppointmentBooking = ({ language }) => {
                             {language 
                                 ? 'بالنقر، أوافق على ' 
                                 : 'By clicking, I hereby agree to the '}
-                            <a href="#" className="terms-link">{language ? 'الشروط والأحكام' : 'Terms & Conditions'}</a>
+                            <a href="#" onClick={handleTermsAndConditions} className="terms-link">{language ? 'الشروط والأحكام' : 'Terms & Conditions'}</a>
                             {language ? ' و ' : ' and '}
-                            <a href="#" className="privacy-link">{language ? 'سياسة الخصوصية' : 'Privacy Policy'}</a>
+                            <a href="#" onClick={handlePrivacyPolicies} className="privacy-link">{language ? 'سياسة الخصوصية' : 'Privacy Policy'}</a>
                         </span>
                     </label>
                 </div>

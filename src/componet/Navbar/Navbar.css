@@ -211,9 +211,9 @@
     transform: translateX(-10px);
   }
   
-  .mobile-menu-item:hover {
+  /* .mobile-menu-item:hover {
     background-color: rgba(255, 255, 255, 0.15);
-  }
+  } */
   
   .mobile-menu-item:hover .mobile-menu-text {
     transform: translateX(10px);
@@ -254,7 +254,7 @@
   }
   
   .mobile-language-toggle:hover {
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }

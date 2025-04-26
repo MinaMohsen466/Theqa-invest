@@ -1,9 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Statistics.css';
+import { useNavigate } from 'react-router-dom';
 
 const Statistics = ({ language }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const navigate = useNavigate();
+    const handleBookAppointment = () => {
+        navigate('/book-appointment');
+    }
   
   // Stats data
   const stats = [
@@ -79,7 +84,7 @@ const Statistics = ({ language }) => {
         <div className="statistics-text">
           <h2>{language ? 'أنت في المكان الصحيح' : 'You\'re in the right place'}</h2>
           <p>{language ? 'ابدأ الاستثمار في أهدافك اليوم' : 'Start investing in your goals today'}</p>
-          <button className="appointment-button">
+          <button className="appointment-button" onClick={handleBookAppointment}>
             {language ? 'احجز موعدًا' : 'Book An Appointment'}
           </button>
         </div>

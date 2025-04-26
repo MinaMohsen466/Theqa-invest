@@ -17,6 +17,7 @@ import KidsInvestment from './pages/KidsInvestment/KidsInvestment.jsx';
 import InvertmentReco from './pages/InvertmentReco/InvertmentReco.jsx';
 import TermsAndConditions from './pages/Terms&Conditions/TermsAndConditions.jsx';
 import PrivacyPolicies from './pages/PrivacyPolicies/PrivacyPolicies.jsx';
+import ScrollToTop from './componet/ScrollToTop/ScrollToTop.jsx';
 function App() {
 // Initialize language from localStorage or default to true (Arabic)
 const [language, setLanguage] = useState(() => {
@@ -25,6 +26,7 @@ const [language, setLanguage] = useState(() => {
 })
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={
           <>
@@ -35,57 +37,56 @@ const [language, setLanguage] = useState(() => {
             <Statistics language={language}/>
             <AboutTheqa language={language}/>
             <LocateUs language={language}/>
-            {/* <StockDeals language={language}/> */}
             <Footer language={language}/>
           </>
         } />
-        <Route path="/retirement-planning" element={
+        <Route path="/تخطيط-التقاعد" element={
           <>
             <Navbar language={language} setLanguage={setLanguage}/>
             <RetirementPlanning language={language}/>
-            <Footer />
+            <Footer language={language}/>
           </>
         } />
-        <Route path="/Estateplan" element={
+        <Route path="/خطة-العقارات" element={
           <>
             <Navbar language={language} setLanguage={setLanguage}/>
             <Estateplan language={language}/>
-            <Footer />
+            <Footer language={language}/>
           </>
         } />
-        <Route path="/KidsInvestment" element={
+        <Route path="/استثمار-للاطفال" element={
           <>
             <Navbar language={language} setLanguage={setLanguage}/>
             <KidsInvestment language={language}/>
-            <Footer />
+            <Footer language={language}/>
           </>
         } />
-        <Route path="/InvertmentReco" element={
+        <Route path="/توصيات-استثمارية" element={
           <>
             <Navbar language={language} setLanguage={setLanguage}/>
             <InvertmentReco language={language}/>
-            <Footer />
+            <Footer language={language}/>
           </>
         } />
         <Route path="/book-appointment" element={
           <>
             <Navbar language={language} setLanguage={setLanguage}/>
             <AppointmentBooking language={language}/>
-            <Footer />
+            <Footer language={language}/>
           </>
         } />
         <Route path="/TermsAndConditions" element={
           <>
             <Navbar language={language} setLanguage={setLanguage}/>
             <TermsAndConditions language={language}/>
-            <Footer />
+            <Footer language={language}/>
           </>
         } />
         <Route path="/PrivacyPolicies" element={
           <>
             <Navbar language={language} setLanguage={setLanguage}/>
             <PrivacyPolicies language={language}/>
-            <Footer />
+            <Footer language={language}/>
           </>
         } />
       </Routes>

@@ -89,6 +89,23 @@
   text-decoration: underline;
 }
 
+.footer.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.footer.rtl .footer-nav ul {
+  padding-right: 0;
+}
+
+.footer.rtl .social-section {
+  text-align: right;
+}
+
+.footer.rtl .footer-bottom {
+  text-align: center;
+}
+
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .footer {

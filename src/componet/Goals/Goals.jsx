@@ -15,18 +15,34 @@ const Goals = ({ language }) => {
   };
   
   const handleReadMoreClick = (index) => {
-    // Currently only implementing navigation for Retirement Planning (index 0)
-    if (index === 0) {
-      navigate('/retirement-planning');
-    }
-    else if (index === 1) {
-      navigate('/Estateplan');
-    }
-    else if (index === 2) {
-      navigate('/KidsInvestment');
-    }
-    else if (index === 3) {
-      navigate('/InvertmentReco');
+    if (language) {
+      // Arabic routes
+      if (index === 0) {
+        navigate('/تخطيط-التقاعد');
+      }
+      else if (index === 1) {
+        navigate('/خطة-العقارات');
+      }
+      else if (index === 2) {
+        navigate('/استثمار-للاطفال');
+      }
+      else if (index === 3) {
+        navigate('/توصيات-استثمارية');
+      }
+    } else {
+      // English routes
+      if (index === 0) {
+        navigate('/retirement-planning');
+      }
+      else if (index === 1) {
+        navigate('/Estateplan');
+      }
+      else if (index === 2) {
+        navigate('/KidsInvestment');
+      }
+      else if (index === 3) {
+        navigate('/InvertmentReco');
+      }
     }
   };
 
@@ -97,6 +113,9 @@ const Goals = ({ language }) => {
     <div className={`goals-container ${language ? 'rtl' : 'ltr'}`}>
       <div className="goals-header">
         <h2>{language ? 'أي هدف حققته؟' : 'Which goal have you accomplished?'}</h2>
+        <button onClick={handleWhatsAppClick} className="Goals-floating-whatsapp-button" aria-label="Contact on WhatsApp">
+        <FaWhatsapp />
+        </button>
       </div>
       <div className="goals-grid">
         {goals.map((goal, index) => (
@@ -121,9 +140,6 @@ const Goals = ({ language }) => {
           </div>
         ))}
       </div>
-      <button onClick={handleWhatsAppClick} className="floating-whatsapp-button" aria-label="Contact on WhatsApp">
-        <FaWhatsapp />
-      </button>
     </div>
   );
 };

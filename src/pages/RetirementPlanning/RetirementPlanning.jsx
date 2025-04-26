@@ -2,8 +2,13 @@ import React from 'react';
 import './RetirementPlanning.css';
 import retirementImage from '../../../public/IMG/temp.png';
 import { FaWhatsapp } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 const RetirementPlanning = ({ language }) => {
+    const navigate = useNavigate();
+    const handleBookAppointment = () => {
+        navigate('/book-appointment');
+    }
     const handleWhatsAppClick = () => {
         window.open(`https://wa.me/98049957`, '_blank');
       };
@@ -33,7 +38,7 @@ const RetirementPlanning = ({ language }) => {
                 </p>
             </div>
             <div className='retirement-btn-whatsapp'>
-                <button className="retirement-appointment-button" onClick={() => window.location.href = '/book-appointment'}>
+                <button className="retirement-appointment-button" onClick={handleBookAppointment}>
                     {language ? "حجز موعد" : "Book An Appointment"}
                 </button>
                 <button onClick={handleWhatsAppClick} className="retirement-floating-whatsapp-button" aria-label={language ? "تواصل عبر واتساب" : "Contact on WhatsApp"}>
