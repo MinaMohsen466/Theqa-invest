@@ -92,7 +92,7 @@ const SliderShow = ({ language }) => {
               {/* Overlay for Desktop */}
               <div className="hidden md:flex absolute inset-0 bg-black/30 items-center justify-left p-60">
                 <div 
-                  className={`text-white max-w-2xl mx-4 ${language ? 'font-[Tajawal]' : 'font-[Poppins]'}`}
+                  className={`text-white max-w-2xl mx-4 ${language ? 'rtl' : 'ltr'}`}
                   dir={language ? "rtl" : "ltr"}
                 >
                   <h2 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight">
@@ -103,7 +103,7 @@ const SliderShow = ({ language }) => {
               {/* Mobile Text Overlay */}
               <div className="md:hidden absolute inset-0 bg-black/30 flex items-center justify-center px-4">
                 <div 
-                  className={`text-white text-center ${language ? 'font-[Tajawal]' : 'font-[Poppins]'}`}
+                  className={`text-white text-center ${language ? 'rtl' : 'ltr'}`}
                   dir={language ? "rtl" : "ltr"}
                 >
                   <h2 className="text-2xl font-bold leading-tight">
@@ -112,9 +112,6 @@ const SliderShow = ({ language }) => {
                 </div>
               </div>
             </div>
-
-            {/* Text Content for Mobile (below image) */}
-            {/* Removed mobile text content section as requested */}
           </div>
         ))}
       </Slider>

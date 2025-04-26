@@ -2,7 +2,13 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-en);
+}
+
+.appointment-booking-container.rtl {
+    direction: rtl;
+    text-align: right;
+    font-family: var(--font-ar);
 }
 
 .appointment-booking-title {
@@ -11,6 +17,21 @@
     font-weight: 600;
     margin-bottom: 2rem;
     color: #000;
+    font-family: var(--font-en);
+}
+
+.rtl .appointment-booking-title {
+    font-family: var(--font-ar);
+}
+
+.consultation-summary h2,
+.form-section-title {
+    font-family: var(--font-en);
+}
+
+.rtl .consultation-summary h2,
+.rtl .form-section-title {
+    font-family: var(--font-ar);
 }
 
 .consultation-summary {
@@ -182,43 +203,4 @@ input[type="tel"] {
 
 .AppointmentBooking-floating-whatsapp-button:hover {
     transform: scale(1.06);
-}
-
-/* RTL Support */
-.rtl {
-    direction: rtl;
-    text-align: right;
-}
-
-.rtl .form-buttons {
-    flex-direction: row-reverse;
-}
-
-.rtl .back-button {
-    flex-direction: row-reverse;
-}
-
-.rtl .floating-whatsapp-button {
-    right: auto;
-    left: 20px;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .form-row {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .appointment-booking-title {
-        font-size: 2rem;
-    }
-    
-    .form-buttons {
-        flex-direction: column;
-    }
-    
-    .rtl .form-buttons {
-        flex-direction: column;
-    }
 }

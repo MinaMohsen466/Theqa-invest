@@ -1,20 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-   
-:root{
-        --primary-color: #9C1B31;
-        --secondary-color: #000000;
-        --white-color: #ffffff;
+
+@font-face {
+    font-family: 'GE Dinar One';
+    src: url('/fonts/GE_DINAR_ONE_MEDIUM.OTF') format('opentype');
+    font-weight: 500;
+    font-style: normal;
 }
+
+:root{
+    --primary-color: #9C1B31;
+    --secondary-color: #000000;
+    --white-color: #ffffff;
+    --font-en: 'Poppins', sans-serif;
+    --font-ar: 'GE Dinar One', 'Tajawal', sans-serif;
+}
+
 *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Apply fonts based on language class */
+.ltr {
+    font-family: var(--font-en);
+}
+
+.rtl {
+    font-family: var(--font-ar);
+}
+
+/* Default font for elements without language class */
+body {
+    font-family: var(--font-en);
+    font-weight: 500;
 }
