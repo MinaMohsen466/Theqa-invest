@@ -40,6 +40,7 @@ const [language, setLanguage] = useState(() => {
             <Footer language={language}/>
           </>
         } />
+        {/* Arabic Routes */}
         <Route path="/تخطيط-التقاعد" element={
           <>
             <Navbar language={language} setLanguage={setLanguage}/>
@@ -62,6 +63,35 @@ const [language, setLanguage] = useState(() => {
           </>
         } />
         <Route path="/توصيات-استثمارية" element={
+          <>
+            <Navbar language={language} setLanguage={setLanguage}/>
+            <InvertmentReco language={language}/>
+            <Footer language={language}/>
+          </>
+        } />
+        {/* English Routes */}
+        <Route path="/retirement-planning" element={
+          <>
+            <Navbar language={language} setLanguage={setLanguage}/>
+            <RetirementPlanning language={language}/>
+            <Footer language={language}/>
+          </>
+        } />
+        <Route path="/Estateplan" element={
+          <>
+            <Navbar language={language} setLanguage={setLanguage}/>
+            <Estateplan language={language}/>
+            <Footer language={language}/>
+          </>
+        } />
+        <Route path="/KidsInvestment" element={
+          <>
+            <Navbar language={language} setLanguage={setLanguage}/>
+            <KidsInvestment language={language}/>
+            <Footer language={language}/>
+          </>
+        } />
+        <Route path="/InvertmentReco" element={
           <>
             <Navbar language={language} setLanguage={setLanguage}/>
             <InvertmentReco language={language}/>

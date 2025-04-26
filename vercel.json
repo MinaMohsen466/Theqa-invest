@@ -1,5 +1,13 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" },
+    { "source": "/تخطيط-التقاعد", "destination": "/index.html" },
+    { "source": "/خطة-العقارات", "destination": "/index.html" },
+    { "source": "/استثمار-للاطفال", "destination": "/index.html" },
+    { "source": "/توصيات-استثمارية", "destination": "/index.html" },
+    { "source": "/retirement-planning", "destination": "/index.html" },
+    { "source": "/Estateplan", "destination": "/index.html" },
+    { "source": "/KidsInvestment", "destination": "/index.html" },
+    { "source": "/InvertmentReco", "destination": "/index.html" }
   ]
 }

@@ -5,12 +5,13 @@ import logo from '../../../public/IMG/theqa-logo.png';
 import { RxCross1 } from "react-icons/rx";
 import { FiGlobe, FiChevronRight } from "react-icons/fi";
 import { RiMenu3Fill } from "react-icons/ri";
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 
 const Navbar = ({ language, setLanguage }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === '/';
   
   useEffect(() => {
@@ -40,28 +41,28 @@ const Navbar = ({ language, setLanguage }) => {
         setMobileMenuOpen(false);
       }
     } else {
-      // Store the target section in sessionStorage before redirecting
-      sessionStorage.setItem('scrollToSection', sectionId);
-      window.location.href = '/';
+      // Navigate to home page with the section to scroll to
+      navigate('/', { state: { scrollTo: sectionId } });
+      setMobileMenuOpen(false);
     }
   };
 
-  // Check for stored section on component mount
+  // Check for stored section on component mount and from navigation state
   useEffect(() => {
     if (isHomePage) {
-      const scrollToSection = sessionStorage.getItem('scrollToSection');
+      const scrollToSection = location.state?.scrollTo;
       if (scrollToSection) {
         const element = document.getElementById(scrollToSection);
         if (element) {
-          // Small delay to ensure page is loaded
           setTimeout(() => {
             element.scrollIntoView({ behavior: 'smooth' });
-            sessionStorage.removeItem('scrollToSection');
+            // Clean up the state
+            navigate('/', { state: null, replace: true });
           }, 100);
         }
       }
     }
-  }, [isHomePage]);
+  }, [isHomePage, location.state, navigate]);
 
   const menuItems = language ? [
     { text: "عنا", key: "about", href: "#about" },
@@ -69,8 +70,8 @@ const Navbar = ({ language, setLanguage }) => {
     { text: "موقعنا", key: "location", href: "#location"}
   ] : [
     { text: "About Theqa", key: "about", href: "#about" },
-    { text: "Services", key: "Services", href: "#testimonial" },
-    { text: "Locate Us", key: "Locate Us", href: "#location" }
+    { text: "Services", key: "testimonial", href: "#testimonial" },
+    { text: "Locate Us", key: "location", href: "#location" }
   ];
 
   return (

@@ -17,31 +17,35 @@ const Goals = ({ language }) => {
   const handleReadMoreClick = (index) => {
     if (language) {
       // Arabic routes
-      if (index === 0) {
-        navigate('/تخطيط-التقاعد');
-      }
-      else if (index === 1) {
-        navigate('/خطة-العقارات');
-      }
-      else if (index === 2) {
-        navigate('/استثمار-للاطفال');
-      }
-      else if (index === 3) {
-        navigate('/توصيات-استثمارية');
+      switch (index) {
+        case 0:
+          navigate('/تخطيط-التقاعد');
+          break;
+        case 1:
+          navigate('/خطة-العقارات');
+          break;
+        case 2:
+          navigate('/استثمار-للاطفال');
+          break;
+        case 3:
+          navigate('/توصيات-استثمارية');
+          break;
       }
     } else {
       // English routes
-      if (index === 0) {
-        navigate('/retirement-planning');
-      }
-      else if (index === 1) {
-        navigate('/Estateplan');
-      }
-      else if (index === 2) {
-        navigate('/KidsInvestment');
-      }
-      else if (index === 3) {
-        navigate('/InvertmentReco');
+      switch (index) {
+        case 0:
+          navigate('/retirement-planning');
+          break;
+        case 1:
+          navigate('/Estateplan');
+          break;
+        case 2:
+          navigate('/KidsInvestment');
+          break;
+        case 3:
+          navigate('/InvertmentReco');
+          break;
       }
     }
   };
