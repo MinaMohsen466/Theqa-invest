@@ -116,9 +116,9 @@ const AppointmentBooking = ({ language }) => {
                             {language 
                                 ? 'بالنقر، أوافق على ' 
                                 : 'By clicking, I hereby agree to the '}
-                            <a href="#" onClick={handleTermsAndConditions} className="terms-link">{language ? 'الشروط والأحكام' : 'Terms & Conditions'}</a>
+                            <a href="" onClick={handleTermsAndConditions} className="terms-link">{language ? 'الشروط والأحكام' : 'Terms & Conditions'}</a>
                             {language ? ' و ' : ' and '}
-                            <a href="#" onClick={handlePrivacyPolicies} className="privacy-link">{language ? 'سياسة الخصوصية' : 'Privacy Policy'}</a>
+                            <a href="" onClick={handlePrivacyPolicies} className="privacy-link">{language ? 'سياسة الخصوصية' : 'Privacy Policy'}</a>
                         </span>
                     </label>
                 </div>
