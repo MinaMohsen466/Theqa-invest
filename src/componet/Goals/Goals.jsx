@@ -1,9 +1,9 @@
 import React from 'react';
 import './Goals.css';
-import retirementImg from '../../../public/IMG/temp.png';
-import estateplanImg from '../../../public/IMG/temp2.png';
-import kidsInvestmentImg from '../../../public/IMG/temp3.png';
-import InvertmentRecoImg from '../../../public/IMG/temp4.png';
+import retirementImg from '../../../public/IMG/Retirement Planning.webp';
+import estateplanImg from '../../../public/IMG/Real Estate.webp';
+import kidsInvestmentImg from '../../../public/IMG/Kids Investment.webp';
+import InvertmentRecoImg from '../../../public/IMG/Invst Recommd.webp';
 import { FaWhatsapp } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 

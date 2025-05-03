@@ -1,6 +1,6 @@
 import React from 'react'
 import './Estateplan.css';
-import temp2 from '../../../public/IMG/temp2.png';
+import RealEstate from '../../../public/IMG/Real Estate.webp';
 import { FaWhatsapp } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ export const Estateplan = ({language}) => {
     return(
     <div className={`Estateplan-container ${language ? 'rtl' : 'ltr'}`}>
         <div className='Estateplan-banner'>
-            <img src={temp2} alt={language ? "تخطيط العقارات والاستثمار" : "Estate planning and investment"} />
+            <img src={RealEstate} alt={language ? "تخطيط العقارات والاستثمار" : "Estate planning and investment"} />
         </div>
         <div className='Estateplan-content'>
             <h2>{language ? "خطة العقارات" : "Establish Your Estate Plan"}</h2>

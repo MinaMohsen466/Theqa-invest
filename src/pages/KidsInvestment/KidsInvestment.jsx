@@ -1,6 +1,6 @@
 import React from 'react'
 import './KidsInvestment.css';
-import temp3 from '../../../public/IMG/temp3.png';
+import KidsInvestmentImg from '../../../public/IMG/Kids Investment.webp';
 import { FaWhatsapp } from "react-icons/fa";
 import './KidsInvestment.css';
 import { useNavigate } from 'react-router-dom';
@@ -17,7 +17,7 @@ const KidsInvestment = ({language}) => {
     return(
     <div className={`Estateplan-container ${language ? 'rtl' : 'ltr'}`}>
         <div className='Estateplan-banner'>
-            <img src={temp3} alt={language ? "استثمار مستقبل أطفالك" : "Elderly couple enjoying retirement at beach"} />
+            <img src={KidsInvestmentImg} alt={language ? "استثمار مستقبل أطفالك" : "Elderly couple enjoying retirement at beach"} />
         </div>
         <div className='Estateplan-content'>
             <h2>{language ? "خطة استثمار للأطفال" : " Plan Your Kids Investment"}</h2>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './Footer.css';
 import { FaTiktok, FaInstagram, FaYoutube } from 'react-icons/fa';
-import logo from '../../../public/IMG/theqa-logo-white.png';
+import InvertLogo from '../../../public/IMG/Theqa Invest Logo Invert.webp';
 import { useLocation, Link } from 'react-router-dom';
 
 const Footer = ({language}) => {
@@ -45,7 +45,7 @@ const Footer = ({language}) => {
     <footer className={`footer ${language ? 'rtl' : ''}`}>
       <div className="footer-container">
         <Link to="/" className="footer-logo">
-          <img src={logo} alt={language ? "شعار ثقة للاستثمار" : "Theqa Invest Logo"} />
+          <img src={InvertLogo} alt={language ? "شعار ثقة للاستثمار" : "Theqa Invest Logo"} />
         </Link>
         
         <div className="social-section">

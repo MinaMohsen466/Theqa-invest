@@ -1,7 +1,7 @@
 // Navbar.jsx
 import React, { useState, useEffect } from 'react';
 import '../Navbar/Navbar.css';
-import logo from '../../../public/IMG/theqa-logo.png';
+import logo from '../../../public/IMG/Theqa Invest Logo.webp';
 import { RxCross1 } from "react-icons/rx";
 import { FiGlobe, FiChevronRight } from "react-icons/fi";
 import { RiMenu3Fill } from "react-icons/ri";

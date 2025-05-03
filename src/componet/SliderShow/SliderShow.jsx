@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./SliderShow.css";
-import Banner from "../../../public/IMG/Banner.png"
+import Banner from "../../../public/IMG/homeBanner2.webp"
 
 const SliderShow = ({ language }) => {
   // Slider configuration without arrows

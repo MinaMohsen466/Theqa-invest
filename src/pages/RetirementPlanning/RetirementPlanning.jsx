@@ -1,6 +1,6 @@
 import React from 'react';
 import './RetirementPlanning.css';
-import retirementImage from '../../../public/IMG/temp.png';
+import retirementImage from '../../../public/IMG/Retirement Planning.webp';
 import { FaWhatsapp } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 

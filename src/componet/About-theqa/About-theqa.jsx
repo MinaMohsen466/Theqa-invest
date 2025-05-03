@@ -1,6 +1,6 @@
 import React from 'react';
 import './About-theqa.css';
-import MrAhmed from '../../../public/IMG/Mr-Ahmed.png';
+import MrAhmed from '../../../public/IMG/Ahmad.webp';
 
 const AboutTheqa = ({ language }) => {
   return (

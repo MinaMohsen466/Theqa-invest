@@ -1,6 +1,6 @@
 import React from 'react'
 import './InvertmentReco.css';
-import investmentRecoImg from '../../../public/IMG/temp4.png';
+import investmentRecoImg from '../../../public/IMG/Invst Recommd.webp';
 import { FaWhatsapp } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
