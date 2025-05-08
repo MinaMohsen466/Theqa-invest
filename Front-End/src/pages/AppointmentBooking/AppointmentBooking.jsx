@@ -100,7 +100,7 @@ const AppointmentBooking = ({ language }) => {
                 
                 <div className="consultation-fee">
                     <span>{language ? 'رسوم الاستشارة' : 'Consultation Fee'}</span>
-                    <span className="fee-amount">60.00KD</span>
+                    <span className="fee-amount">{language ? '60.00د.ك' : '60.00KD'}</span>
                 </div>
                 
                 <div className="terms-container">

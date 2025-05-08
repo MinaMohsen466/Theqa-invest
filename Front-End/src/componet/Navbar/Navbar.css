@@ -16,8 +16,8 @@
 }
   
 .logo img {
-    width: 12.8rem;
-    height: 6.2rem;
+    width: 12rem;
+    height: auto;
     z-index: 1001;
     transition: transform 0.3s ease;
 }

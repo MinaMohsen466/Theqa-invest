@@ -44,7 +44,7 @@
 
 .ceo-signature {
     margin-top: 2rem;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     line-height: 24px;
     z-index: 3;
 }
@@ -70,6 +70,22 @@
 }
 
 .MrAhmed img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.MrAhmed-mobile {
+    display: none;
+    width: 100%;
+    max-width: 250px;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    z-index: 3;
+}
+
+.MrAhmed-mobile img {
     width: 100%;
     height: auto;
     display: block;
@@ -130,6 +146,9 @@
     
     .MrAhmed {
         width: 350px;
+    }
+    .red-line-background {
+        bottom: 10px;
     }
 }
 
@@ -223,17 +242,16 @@
     }
     
     .MrAhmed {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
+        display: none;
     }
     
-    .MrAhmed img {
-        width: 100%;
+    .MrAhmed-mobile {
+        display: block;
+        margin: 1.5rem auto 0 auto;
     }
     
     .ceo-signature {
-        margin-top: 1.5rem;
+        margin-top: 0;
         padding-top: 1rem;
         background-color: #9C1B31;
         padding: 1rem;

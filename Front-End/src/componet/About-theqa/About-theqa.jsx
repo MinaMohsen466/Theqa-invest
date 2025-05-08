@@ -16,9 +16,12 @@ const AboutTheqa = ({ language }) => {
               One-on-one sessions with an investment manager to discuss <br/>personal financial goals, risk tolerance, and to develop a <br/> customized investment plan</>}
           </p>
         </div>
+        <div className='MrAhmed-mobile'>
+          <img src={MrAhmed} alt={language ? 'م. أحمد المطوع' : 'Eng. Ahmad Al Mutawa'} />
+        </div>
         <div className="ceo-signature">
           <p className="ceo-name">{language ? 'م. أحمد المطوع' : 'Eng. Ahmad Al Mutawa'}</p>
-          <p className="ceo-title">{language ? 'الرئيس التنفيذي ثقة للاستثمار - مرادر للخدمات' : 'CEO THEQA INVEST MURAADER SERVICES'}</p>
+          <p className="ceo-title">{language ? 'الرئيس التنفيذي ثقة للاستثمار - مبادر للخدمات' : 'CEO THEQA INVEST MUBAADER SERVICES'}</p>
         </div>
       </div>
       <div className='MrAhmed'>
